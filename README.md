@@ -4,6 +4,8 @@
 
 An example feed parser using [camaro](https://github.com/tuananh/camaro)
 
+[![Build Status](https://travis-ci.org/tuananh/feed-furious.svg?branch=master)](https://travis-ci.org/tuananh/feed-furious)
+
 ## Installation
 
 ```sh
