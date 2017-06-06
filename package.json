@@ -1,0 +1,25 @@
+{
+  "name": "feed-furious",
+  "version": "1.0.0",
+  "description": "A fast XML feed parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tuananh/feed-furious.git"
+  },
+  "keywords": [
+    "feed",
+    "parser"
+  ],
+  "author": "Tuan Anh Tran <me@tuananh.org> (https://tuananh.org)",
+  "license": "MIT",
+  "dependencies": {
+    "camaro": "^1.0.4"
+  },
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
