@@ -2,13 +2,8 @@ const transform = require('camaro')
 const templates = require('./templates')
 
 function detectFeedType(xml) {
-    const sample = transform(xml, {
-        rss: 'rss/channel/title',
-        atom: 'feed/title'
-    })
-
-    if (sample.rss) return 'rss'
-    if (sample.atom) return 'atom'
+    if (xml.indexOf('<rss') !== -1) return 'rss'
+    if (xml.indexOf('<feed') !== -1) return 'atom'
     throw new Error('unknown feed type')
 }
 
