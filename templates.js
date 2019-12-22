@@ -25,7 +25,7 @@ const atom = {
         published: 'published',
         description: 'summary',
         link: 'link',
-        categories: ['category', '.']
+        categories: ['category', '@term']
     }]
 }
 
