@@ -28,6 +28,7 @@ test('test more complicated atom feed', (t) => {
 
     t.equal(result.title, 'dive into mark', 'title should be dive into mark')
     t.equal(result.link, 'http://example.org/', 'link should be http://example.org/')
+    t.equal(result.items[0].categories[0], 'snapshot', 'category should be snapshot')
 
     t.end()
 })
@@ -38,6 +39,7 @@ test('test more complicated rss feed', (t) => {
 
     t.equal(result.title, 'Liftoff News', 'title should be Liftoff News')
     t.equal(result.link, 'http://liftoff.msfc.nasa.gov/', 'link should be http://liftoff.msfc.nasa.gov/')
+    t.equal(result.items[0].categories[0], 'star', 'category of first post should be star')
 
     t.end()
 })

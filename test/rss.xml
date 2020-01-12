@@ -17,11 +17,13 @@
          <description>How do Americans get ready to work with Russians aboard the International Space Station? They take a crash course in culture, language and protocol at Russia's &lt;a href="http://howe.iki.rssi.ru/GCTC/gctc_e.htm"&gt;Star City&lt;/a&gt;.</description>
          <pubDate>Tue, 03 Jun 2003 09:39:21 GMT</pubDate>
          <guid>http://liftoff.msfc.nasa.gov/2003/06/03.html#item573</guid>
+         <category>star</category>
       </item>
       <item>
          <description>Sky watchers in Europe, Asia, and parts of Alaska and Canada will experience a &lt;a href="http://science.nasa.gov/headlines/y2003/30may_solareclipse.htm"&gt;partial eclipse of the Sun&lt;/a&gt; on Saturday, May 31st.</description>
          <pubDate>Fri, 30 May 2003 11:06:42 GMT</pubDate>
          <guid>http://liftoff.msfc.nasa.gov/2003/05/30.html#item572</guid>
+         <category>sky</category>
       </item>
       <item>
          <title>The Engine That Does More</title>
@@ -29,6 +31,7 @@
          <description>Before man travels to Mars, NASA hopes to design new engines that will let us fly through the Solar System more quickly.  The proposed VASIMR engine would do that.</description>
          <pubDate>Tue, 27 May 2003 08:37:32 GMT</pubDate>
          <guid>http://liftoff.msfc.nasa.gov/2003/05/27.html#item571</guid>
+         <category>engine</category>
       </item>
       <item>
          <title>Astronauts' Dirty Laundry</title>
@@ -36,6 +39,7 @@
          <description>Compared to earlier spacecraft, the International Space Station has many luxuries, but laundry facilities are not one of them.  Instead, astronauts have other options.</description>
          <pubDate>Tue, 20 May 2003 08:56:02 GMT</pubDate>
          <guid>http://liftoff.msfc.nasa.gov/2003/05/20.html#item570</guid>
+         <category>laundry</category>
       </item>
    </channel>
 </rss>

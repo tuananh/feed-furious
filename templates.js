@@ -1,6 +1,6 @@
 const rss = {
     title: 'rss/channel/title',
-    link: 'rss/channel/link|rss/channel/atom:link',
+    link: 'rss/channel/link|rss/channel/atom:link/@href',
     description: 'rss/channel/description',
     language: 'rss/channel/language',
     updated: 'rss/channel/lastBuildDate',
@@ -25,7 +25,7 @@ const atom = {
         published: 'published',
         description: 'summary',
         link: 'link',
-        categories: ['category', '.']
+        categories: ['category', '@term']
     }]
 }
 
