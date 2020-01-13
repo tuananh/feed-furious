@@ -15,6 +15,8 @@ npm install feed-furious
 ## Usage
 
 ```js
+const { parse } = require('feed-furious')
+
 const xml = '<feed><title><![CDATA[Hello]]> <![CDATA[World]]></title><entry>' +
     '<link>http://example.com/1</link>' +
     '<content><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius mattis convallis. ' +
@@ -27,7 +29,12 @@ const xml = '<feed><title><![CDATA[Hello]]> <![CDATA[World]]></title><entry>' +
     'Donec eget placerat lacus.]]></content>' +
     '</entry></feed>'
 
-const result = parse(xml)
+const parseFeed = async () => {
+    const result = await parse(xml)
+    console.log(result)
+}
+
+parseFeed()
 ```
 
 ## Licence

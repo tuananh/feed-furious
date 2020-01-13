@@ -1,8 +1,8 @@
 const { parse } = require('../')
-const fs = require('fs')
+const { readFile } = require('fs').promises
 const test = require('tape')
 
-test('test simple atom feed', (t) => {
+test('test simple atom feed', async (t) => {
     const xml = '<feed><title><![CDATA[Hello]]> <![CDATA[World]]></title><entry>' +
     '<link>http://example.com/1</link>' +
     '<content><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius mattis convallis. ' +
@@ -15,16 +15,16 @@ test('test simple atom feed', (t) => {
     'Donec eget placerat lacus.]]></content>' +
     '</entry></feed>'
 
-    const result = parse(xml)
+    const result = await parse(xml)
     t.equal(result.title, 'HelloWorld', 'title should be HelloWorld')
     t.equal(result.items[0].link, 'http://example.com/1', 'link should be http://example.com/1')
 
     t.end()
 })
 
-test('test more complicated atom feed', (t) => {
-    const xml = fs.readFileSync(__dirname + '/atom.xml', 'utf-8')
-    const result = parse(xml)
+test('test more complicated atom feed', async (t) => {
+    const xml = await readFile(__dirname + '/atom.xml', 'utf-8')
+    const result = await parse(xml)
 
     t.equal(result.title, 'dive into mark', 'title should be dive into mark')
     t.equal(result.link, 'http://example.org/', 'link should be http://example.org/')
@@ -33,9 +33,9 @@ test('test more complicated atom feed', (t) => {
     t.end()
 })
 
-test('test more complicated rss feed', (t) => {
-    const xml = fs.readFileSync(__dirname + '/rss.xml', 'utf-8')
-    const result = parse(xml)
+test('test more complicated rss feed', async (t) => {
+    const xml = await readFile(__dirname + '/rss.xml', 'utf-8')
+    const result = await parse(xml)
 
     t.equal(result.title, 'Liftoff News', 'title should be Liftoff News')
     t.equal(result.link, 'http://liftoff.msfc.nasa.gov/', 'link should be http://liftoff.msfc.nasa.gov/')
