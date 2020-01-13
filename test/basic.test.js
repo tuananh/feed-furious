@@ -1,5 +1,6 @@
 const { parse } = require('../')
-const { readFile } = require('fs').promises
+const { promisify } = require('util')
+const readFile = promisify(require('fs').readFile)
 const test = require('tape')
 
 test('test simple atom feed', async (t) => {
