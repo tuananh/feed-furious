@@ -1,8 +1,8 @@
-const transform = require('camaro')
+const { transform } = require('camaro')
 const templates = require('./templates')
 
-function detectFeedType(xml) {
-    const sample = transform(xml, {
+async function detectFeedType(xml) {
+    const sample = await transform(xml, {
         rss: 'rss/channel/title',
         atom: 'feed/title'
     })
@@ -12,9 +12,10 @@ function detectFeedType(xml) {
     throw new Error('unknown feed type')
 }
 
-function parse(xml) {
-    const type = detectFeedType(xml)
-    return transform(xml, templates[type])
+async function parse(xml) {
+    const type = await detectFeedType(xml)
+    const result = await transform(xml, templates[type])
+    return result
 }
 
 module.exports = { parse }

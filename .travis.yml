@@ -1,13 +1,13 @@
 language: node_js
 node_js:
-  - "6"
-  - "7"
-  - "8"
-env:
-  - CXX=g++-5
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-5
+  - '8'
+  - '9'
+  - '10'
+  - '11'
+  - '12'
+  - '13'
+
+cache:
+  npm: true
+script:
+  - npm test
