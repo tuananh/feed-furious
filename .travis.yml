@@ -6,5 +6,8 @@ node_js:
   - '11'
   - '12'
   - '13'
+
+cache:
+  npm: true
 script:
   - npm test
