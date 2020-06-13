@@ -1,4 +1,4 @@
-const transform = require('camaro')
+const { transform } = require('camaro')
 const templates = require('./templates')
 
 function detectFeedType(xml) {
@@ -7,7 +7,7 @@ function detectFeedType(xml) {
     throw new Error('unknown feed type')
 }
 
-function parse(xml) {
+async function parse(xml) {
     const type = detectFeedType(xml)
     return transform(xml, templates[type])
 }
