@@ -18,6 +18,9 @@
     "feed",
     "parser"
   ],
+  "engines": {
+    "node": ">=12"
+  },
   "author": "Tuan Anh Tran <me@tuananh.org> (https://tuananh.org)",
   "license": "MIT",
   "dependencies": {
